@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git --yes)",
+      "Bash(printf \"y\\\\n\")",
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(mkdir -p \"D:/CDUI/Cours/WEB/evaluation-coffee-shop/.backup\")",
+      "Bash(mv \"D:/CDUI/Cours/WEB/evaluation-coffee-shop/README.md\" \"D:/CDUI/Cours/WEB/evaluation-coffee-shop/.backup/\")",
+      "Bash(mv \"D:/CDUI/Cours/WEB/evaluation-coffee-shop/sujet-evaluation.md\" \"D:/CDUI/Cours/WEB/evaluation-coffee-shop/.backup/\")",
+      "Bash(mv \"D:/CDUI/Cours/WEB/evaluation-coffee-shop/prd.md\" \"D:/CDUI/Cours/WEB/evaluation-coffee-shop/.backup/\")",
+      "Bash(mv \"D:/CDUI/Cours/WEB/evaluation-coffee-shop/CLAUDE.md\" \"D:/CDUI/Cours/WEB/evaluation-coffee-shop/.backup/\")",
+      "Bash(npx create-next-app@latest --help)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --disable-git --yes)",
+      "Bash(npx shadcn@latest init -d)"
+    ]
+  }
+}
