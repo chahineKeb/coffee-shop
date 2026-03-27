@@ -1,5 +1,6 @@
 import Navbar from "@/components/sections/Navbar"
 import Hero from "@/components/sections/Hero"
+import Builder from "@/components/sections/Builder"
 import Menu from "@/components/sections/Menu"
 import Values from "@/components/sections/Values"
 import Newsletter from "@/components/sections/Newsletter"
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <Builder />
         <Menu />
         <Values />
         <Newsletter />
