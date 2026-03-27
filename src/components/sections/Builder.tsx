@@ -403,7 +403,7 @@ function RecapStep({
           <div className="bg-white rounded-2xl border border-black/5 shadow-sm overflow-hidden">
             {/* Header ticket */}
             <div className="bg-espresso px-6 py-5 flex items-center gap-3">
-              <Image src="/lego.svg" alt="Logo LEGO" width={36} height={36} className="rounded-sm flex-shrink-0" />
+              <Image src="/lego.svg" alt="LEGO Coffee Shop — café halal Paris 11e" width={36} height={36} className="rounded-sm flex-shrink-0" />
               <div>
                 <p className="font-heading font-bold text-lego-off-white text-lg">Ta commande</p>
                 <p className="text-lego-off-white/40 text-xs">LEGO Coffee Shop · Paris 11e</p>
@@ -555,10 +555,10 @@ export default function Builder() {
             🧱 L&apos;expérience en magasin
           </span>
           <h2 className="font-heading font-bold text-4xl md:text-5xl text-warm-dark mb-4 text-balance">
-            Construis ta commande
+            Compose ta boisson halal sur mesure
           </h2>
           <p className="text-warm-muted text-lg max-w-xl mx-auto">
-            Glisse les briques dans ta sélection — ou clique dessus — comme tu le ferais au comptoir.
+            Glisse les briques dans ta sélection — ou clique dessus — comme tu le ferais au comptoir de notre café Paris 11e.
           </p>
         </motion.div>
 

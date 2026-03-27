@@ -56,6 +56,11 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="font-heading font-bold text-5xl md:text-7xl text-white leading-[1.05] mb-6 text-balance"
         >
+          <span className="flex items-center justify-center gap-3 text-xl md:text-2xl font-medium text-white/65 mb-4 tracking-[0.12em] uppercase">
+            <span className="h-px w-8 bg-caramel/60 inline-block" aria-hidden="true" />
+            Café de spécialité Halal · Paris 11e
+            <span className="h-px w-8 bg-caramel/60 inline-block" aria-hidden="true" />
+          </span>
           Crée ta boisson.
           <br />
           <span className="text-lego-red">Brique par brique.</span>

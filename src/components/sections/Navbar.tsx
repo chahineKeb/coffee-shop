@@ -31,7 +31,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2.5 group" aria-label="LEGO Coffee Shop — accueil">
           <Image
             src="/lego.svg"
-            alt="Logo LEGO"
+            alt="LEGO Coffee Shop — café halal Paris 11e"
             width={36}
             height={36}
             className="rounded-sm shadow-sm flex-shrink-0"

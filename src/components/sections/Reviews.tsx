@@ -93,7 +93,7 @@ const cardVariant = {
 
 export default function Reviews() {
   return (
-    <section className="bg-warm-dark py-24 px-5 md:px-10" aria-labelledby="reviews-heading">
+    <section className="bg-warm-dark py-24 px-5 md:px-10 lego-stud-pattern" aria-labelledby="reviews-heading">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -111,7 +111,7 @@ export default function Reviews() {
             id="reviews-heading"
             className="font-heading font-bold text-3xl md:text-4xl text-lego-off-white mb-4"
           >
-            Ils nous font confiance
+            Ils nous font confiance — Avis clients Paris 11e
           </h2>
           <p className="text-lego-off-white/75 max-w-md mx-auto text-sm leading-relaxed">
             Plus de 200 clients réguliers nous font confiance chaque semaine.

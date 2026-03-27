@@ -4,19 +4,32 @@ import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Mentions légales — LEGO Coffee Shop",
-  description: "Mentions légales du LEGO Coffee Shop, Paris 11e.",
+  description: "Mentions légales du LEGO Coffee Shop, café de spécialité halal à Paris 11e.",
   robots: { index: false, follow: false },
+}
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://lego-coffee-shop.vercel.app" },
+    { "@type": "ListItem", position: 2, name: "Mentions légales", item: "https://lego-coffee-shop.vercel.app/mentions-legales" },
+  ],
 }
 
 export default function MentionsLegales() {
   return (
     <div className="min-h-screen bg-espresso text-lego-off-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       {/* Header */}
       <header className="border-b border-white/8 py-5 px-5 md:px-10">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5" aria-label="Retour à l'accueil">
-            <Image src="/lego.svg" alt="Logo LEGO" width={28} height={28} className="rounded-sm" />
+            <Image src="/lego.svg" alt="LEGO Coffee Shop — café halal Paris 11e" width={28} height={28} className="rounded-sm" />
             <span className="font-heading font-bold text-lg text-lego-off-white">Coffee Shop</span>
           </Link>
           <Link

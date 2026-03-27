@@ -45,7 +45,7 @@ export default function Footer() {
             <div className="flex items-center gap-2.5 mb-2">
               <Image
                 src="/lego.svg"
-                alt="Logo LEGO"
+                alt="LEGO Coffee Shop — café halal Paris 11e"
                 width={32}
                 height={32}
                 className="rounded-sm flex-shrink-0"

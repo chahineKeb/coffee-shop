@@ -4,8 +4,17 @@ import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité — LEGO Coffee Shop",
-  description: "Politique de confidentialité et protection des données personnelles du LEGO Coffee Shop, Paris 11e.",
+  description: "Politique de confidentialité et protection des données personnelles du LEGO Coffee Shop, café halal Paris 11e.",
   robots: { index: false, follow: false },
+}
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://lego-coffee-shop.vercel.app" },
+    { "@type": "ListItem", position: 2, name: "Politique de confidentialité", item: "https://lego-coffee-shop.vercel.app/politique-de-confidentialite" },
+  ],
 }
 
 const sections = [
@@ -92,6 +101,10 @@ Le site est hébergé sur **Vercel** (infrastructure sécurisée, HTTPS enforced
 export default function PolitiqueConfidentialite() {
   return (
     <div className="min-h-screen bg-espresso text-lego-off-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       {/* Header */}
       <header className="border-b border-white/8 py-5 px-5 md:px-10">

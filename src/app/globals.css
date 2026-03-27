@@ -137,13 +137,25 @@
   }
   html {
     scroll-behavior: smooth;
+    /* Compense la navbar fixe (~72px) sur les ancres internes */
+    scroll-padding-top: 80px;
     @apply font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   body {
     @apply bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-space-grotesk), ui-rounded, system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  /* Sélection de texte — couleur marque */
+  ::selection {
+    background-color: var(--color-lego-red);
+    color: #fff;
   }
 
   /* Focus visible global — anneau caramel sur tous les éléments interactifs */
@@ -165,9 +177,16 @@
 }
 
 @layer utilities {
+  /* Pattern "studs" LEGO — visible sur fond sombre */
   .lego-stud-pattern {
-    background-image: radial-gradient(circle, rgba(255, 248, 240, 0.04) 40%, transparent 40%);
-    background-size: 18px 18px;
+    background-image: radial-gradient(circle, rgba(255, 248, 240, 0.055) 38%, transparent 38%);
+    background-size: 20px 20px;
+  }
+
+  /* Pattern "studs" LEGO — subtil sur fond clair */
+  .lego-stud-pattern-dark {
+    background-image: radial-gradient(circle, rgba(44, 26, 14, 0.03) 38%, transparent 38%);
+    background-size: 20px 20px;
   }
 
   /* Grain texture subtile */
@@ -186,5 +205,21 @@
 
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Trait décoratif caramel sous un titre */
+  .heading-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .heading-underline::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 48px;
+    height: 3px;
+    background: var(--color-caramel);
+    border-radius: 2px;
   }
 }

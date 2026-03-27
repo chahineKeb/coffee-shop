@@ -10,7 +10,7 @@ const itemPhotos: Record<string, string> = {
   espresso:       "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=600&q=80",
   cappuccino:     "https://images.unsplash.com/photo-1534778101976-62847782c213?w=600&q=80",
   machiatto:      "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80",
-  "matcha-latte": "https://images.unsplash.com/photo-1606471191009-63994c53433b?w=600&q=80",
+  "matcha-latte": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=600&q=80",
   "bubble-tea":   "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
   citronade:      "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80",
   "muffin-egg":   "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=600&q=80",
@@ -36,7 +36,7 @@ export default function Menu() {
   const filtered = menuItems.filter((item) => item.category === activeTab)
 
   return (
-    <section id="menu" className="py-20 md:py-28 bg-cream" aria-label="Notre menu">
+    <section id="menu" className="py-20 md:py-28 bg-cream lego-stud-pattern-dark" aria-label="Notre menu">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
 
         {/* Header */}
@@ -51,7 +51,7 @@ export default function Menu() {
             Ce qu&apos;on propose
           </span>
           <h2 className="font-heading font-bold text-4xl md:text-5xl text-warm-dark mt-3 mb-4 text-balance">
-            Ton menu, tes règles
+            Menu Café Halal — Paris 11e
           </h2>
           <p className="text-warm-muted text-lg max-w-xl mx-auto">
             On a la base. Toi, tu fais le reste — sélectionne, personnalise, déguste.
@@ -103,13 +103,13 @@ export default function Menu() {
                 key={item.id}
                 variants={cardAnim}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-black/4 group"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-caramel/10 transition-all duration-300 border border-black/4 hover:border-caramel/20 group"
               >
                 {/* Photo */}
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={itemPhotos[item.id] ?? "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80"}
-                    alt={item.name}
+                    alt={`${item.name} — café de spécialité halal, LEGO Coffee Shop Paris 11e`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

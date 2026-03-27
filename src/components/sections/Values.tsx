@@ -39,7 +39,7 @@ export default function Values() {
               Le concept
             </span>
             <h2 className="font-heading font-bold text-4xl md:text-5xl text-lego-off-white mt-3 mb-6 text-balance leading-tight">
-              Ton café,{" "}
+              Notre café de spécialité,{" "}
               <span className="text-lego-red">assemblé comme des LEGO</span>
             </h2>
             <p className="text-lego-off-white/80 text-lg leading-relaxed mb-5">
@@ -124,15 +124,20 @@ export default function Values() {
 
       {/* Engagements */}
       <div className="max-w-7xl mx-auto px-5 md:px-10 py-20 md:py-24">
-        <motion.h3
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="font-heading font-bold text-3xl text-lego-off-white text-center mb-12"
+          className="text-center mb-12"
         >
-          Ce qu&apos;on te promet, on le tient
-        </motion.h3>
+          <span className="inline-block text-xs font-semibold tracking-widest text-caramel uppercase mb-3">
+            Qualité sans compromis
+          </span>
+          <h3 className="font-heading font-bold text-3xl text-lego-off-white">
+            Nos engagements qualité
+          </h3>
+        </motion.div>
         <div className="grid md:grid-cols-3 gap-6">
           {commitments.map((c, i) => (
             <motion.div
