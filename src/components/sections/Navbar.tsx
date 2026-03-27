@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -27,8 +28,18 @@ export default function Navbar() {
       aria-label="Navigation principale"
     >
       <div className="max-w-7xl mx-auto px-5 md:px-10 py-4 flex items-center justify-between">
-        <Link href="/" className="font-heading font-bold text-xl text-lego-off-white tracking-tight">
-          <span className="text-lego-red">LEGO</span> Coffee Shop
+        <Link href="/" className="flex items-center gap-2.5 group" aria-label="LEGO Coffee Shop — accueil">
+          <Image
+            src="/lego.svg"
+            alt="Logo LEGO"
+            width={36}
+            height={36}
+            className="rounded-sm shadow-sm flex-shrink-0"
+            priority
+          />
+          <span className="font-heading font-bold text-xl text-lego-off-white tracking-tight leading-none">
+            Coffee Shop
+          </span>
         </Link>
 
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-lego-off-white/70 list-none">
@@ -50,10 +61,10 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="#menu"
+          href="#builder"
           className="hidden md:inline-flex items-center px-5 py-2.5 bg-lego-red text-white text-sm font-semibold rounded-lg hover:bg-red-700 transition-all duration-200 hover:shadow-lg hover:shadow-lego-red/25"
         >
-          Voir le menu
+          Créer ma commande
         </a>
 
         <button
@@ -91,11 +102,11 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#menu"
+              href="#builder"
               className="mt-2 px-5 py-3 bg-lego-red text-center text-white font-semibold rounded-lg"
               onClick={() => setOpen(false)}
             >
-              Voir le menu
+              Créer ma commande
             </a>
           </motion.div>
         )}

@@ -1,3 +1,6 @@
+import Image from "next/image"
+import Link from "next/link"
+
 const socials = [
   {
     name: "Instagram",
@@ -39,9 +42,18 @@ export default function Footer() {
 
           {/* Marque */}
           <div className="md:col-span-2">
-            <p className="font-heading font-bold text-2xl text-lego-off-white mb-2">
-              <span className="text-lego-red">LEGO</span> Coffee Shop
-            </p>
+            <div className="flex items-center gap-2.5 mb-2">
+              <Image
+                src="/lego.svg"
+                alt="Logo LEGO"
+                width={32}
+                height={32}
+                className="rounded-sm flex-shrink-0"
+              />
+              <p className="font-heading font-bold text-2xl text-lego-off-white">
+                Coffee Shop
+              </p>
+            </div>
             <p className="text-lego-off-white/40 text-sm max-w-xs leading-relaxed">
               Un café branché qui ne triche pas. Café de spécialité colombien,
               nourriture maison, 100&nbsp;% Halal.
@@ -97,8 +109,25 @@ export default function Footer() {
 
         <div className="border-t border-white/8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-lego-off-white/25 text-xs">
           <p>© 2026 LEGO Coffee Shop. Toutes nos briques sont uniques, comme toi.</p>
-          <p>Paris 11e · Café de spécialité · Halal · Fait maison</p>
+          <div className="flex items-center gap-4 flex-wrap justify-center">
+            <p>Paris 11e · Café de spécialité · Halal · Fait maison</p>
+            <span className="hidden sm:block text-white/15">|</span>
+            <div className="flex items-center gap-3">
+              <Link href="/mentions-legales" className="hover:text-lego-off-white/55 transition-colors">
+                Mentions légales
+              </Link>
+              <span className="text-white/15">·</span>
+              <Link href="/politique-de-confidentialite" className="hover:text-lego-off-white/55 transition-colors">
+                Confidentialité
+              </Link>
+            </div>
+          </div>
         </div>
+
+        {/* Mention projet fictif — discrète */}
+        <p className="text-center text-lego-off-white/15 text-xs mt-6 leading-relaxed">
+          Site fictif réalisé dans le cadre d'un projet pédagogique — CDUI 2026. Aucun produit réel, aucune transaction possible.
+        </p>
       </div>
     </footer>
   )

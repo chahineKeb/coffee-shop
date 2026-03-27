@@ -1,15 +1,17 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { motion } from "framer-motion"
 
 export default function Newsletter() {
   const [email, setEmail] = useState("")
+  const [consent, setConsent] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (email.trim()) setSubmitted(true)
+    if (email.trim() && consent) setSubmitted(true)
   }
 
   return (
@@ -53,22 +55,47 @@ export default function Newsletter() {
               </p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" noValidate>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="ton@email.com"
-                required
-                aria-label="Adresse email"
-                className="flex-1 px-5 py-3.5 bg-white border border-warm-dark/10 rounded-xl text-warm-dark placeholder:text-warm-muted/50 focus:outline-none focus:ring-2 focus:ring-lego-red/30 transition-all text-sm"
-              />
-              <button
-                type="submit"
-                className="px-6 py-3.5 bg-lego-red text-white font-bold rounded-xl hover:bg-red-700 transition-all whitespace-nowrap cursor-pointer text-sm shadow-lg shadow-lego-red/20"
-              >
-                M&apos;inscrire
-              </button>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md mx-auto" noValidate>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="ton@email.com"
+                  required
+                  aria-label="Adresse email"
+                  className="flex-1 px-5 py-3.5 bg-white border border-warm-dark/10 rounded-xl text-warm-dark placeholder:text-warm-muted/50 focus:outline-none focus:ring-2 focus:ring-lego-red/30 transition-all text-sm"
+                />
+                <button
+                  type="submit"
+                  disabled={!consent}
+                  className="px-6 py-3.5 bg-lego-red text-white font-bold rounded-xl hover:bg-red-700 transition-all whitespace-nowrap cursor-pointer text-sm shadow-lg shadow-lego-red/20 disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  M&apos;inscrire
+                </button>
+              </div>
+              <label className="flex items-start gap-2.5 cursor-pointer group">
+                <input
+                  type="checkbox"
+                  checked={consent}
+                  onChange={(e) => setConsent(e.target.checked)}
+                  required
+                  className="mt-0.5 w-4 h-4 accent-lego-red flex-shrink-0 cursor-pointer"
+                  aria-required="true"
+                />
+                <span className="text-warm-muted text-xs leading-relaxed">
+                  J&apos;accepte que mon adresse e-mail soit utilisée pour recevoir la newsletter du LEGO Coffee Shop.
+                  Désinscription possible à tout moment.{" "}
+                  <Link
+                    href="/politique-de-confidentialite"
+                    className="text-coffee-brown underline underline-offset-2 hover:text-warm-dark transition-colors"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Politique de confidentialité
+                  </Link>
+                </span>
+              </label>
             </form>
           )}
         </motion.div>
