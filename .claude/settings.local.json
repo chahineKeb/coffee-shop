@@ -12,7 +12,10 @@
       "Bash(mv \"D:/CDUI/Cours/WEB/evaluation-coffee-shop/CLAUDE.md\" \"D:/CDUI/Cours/WEB/evaluation-coffee-shop/.backup/\")",
       "Bash(npx create-next-app@latest --help)",
       "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --disable-git --yes)",
-      "Bash(npx shadcn@latest init -d)"
+      "Bash(npx shadcn@latest init -d)",
+      "Bash(npx shadcn@latest add card badge tabs input --yes)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(list\\(d.get\\(''''exports'''',{}\\).keys\\(\\)\\)[:10]\\)\")",
+      "Bash(node -e \"const pkg = require\\(''./node_modules/framer-motion/package.json''\\); console.log\\(Object.keys\\(pkg.exports || {}\\).slice\\(0,10\\)\\); console.log\\(''version:'', pkg.version\\)\")"
     ]
   }
 }
