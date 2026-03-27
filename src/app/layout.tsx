@@ -104,6 +104,12 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-espresso text-lego-off-white">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-caramel focus:text-espresso focus:font-semibold focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm"
+        >
+          Aller au contenu principal
+        </a>
         {children}
         <CookieBanner />
       </body>

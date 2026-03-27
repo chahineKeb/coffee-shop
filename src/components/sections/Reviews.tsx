@@ -113,7 +113,7 @@ export default function Reviews() {
           >
             Ils nous font confiance
           </h2>
-          <p className="text-lego-off-white/50 max-w-md mx-auto text-sm leading-relaxed">
+          <p className="text-lego-off-white/75 max-w-md mx-auto text-sm leading-relaxed">
             Plus de 200 clients réguliers nous font confiance chaque semaine.
             Voici ce qu'ils disent.
           </p>
@@ -123,7 +123,7 @@ export default function Reviews() {
             <span className="font-heading font-bold text-3xl text-lego-off-white">4.9</span>
             <div className="flex flex-col items-start gap-1">
               <Stars count={5} />
-              <span className="text-lego-off-white/40 text-xs">basé sur 200+ avis</span>
+              <span className="text-lego-off-white/65 text-xs">basé sur 200+ avis</span>
             </div>
           </div>
         </motion.div>
@@ -158,16 +158,16 @@ export default function Reviews() {
                   </p>
                   <Stars count={r.rating} />
                 </div>
-                <span className="text-lego-off-white/25 text-xs flex-shrink-0">{r.date}</span>
+                <span className="text-lego-off-white/55 text-xs flex-shrink-0">{r.date}</span>
               </div>
 
               {/* Review text */}
-              <p className="text-lego-off-white/65 text-sm leading-relaxed flex-1">
+              <p className="text-lego-off-white/85 text-sm leading-relaxed flex-1">
                 {r.text}
               </p>
 
               {/* Tag */}
-              <span className="self-start px-2.5 py-1 bg-white/6 border border-white/10 text-lego-off-white/45 text-xs rounded-full">
+              <span className="self-start px-2.5 py-1 bg-white/6 border border-white/10 text-lego-off-white/70 text-xs rounded-full">
                 {r.tag}
               </span>
             </motion.article>

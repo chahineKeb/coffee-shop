@@ -15,7 +15,8 @@
       "Bash(npx shadcn@latest init -d)",
       "Bash(npx shadcn@latest add card badge tabs input --yes)",
       "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(list\\(d.get\\(''''exports'''',{}\\).keys\\(\\)\\)[:10]\\)\")",
-      "Bash(node -e \"const pkg = require\\(''./node_modules/framer-motion/package.json''\\); console.log\\(Object.keys\\(pkg.exports || {}\\).slice\\(0,10\\)\\); console.log\\(''version:'', pkg.version\\)\")"
+      "Bash(node -e \"const pkg = require\\(''./node_modules/framer-motion/package.json''\\); console.log\\(Object.keys\\(pkg.exports || {}\\).slice\\(0,10\\)\\); console.log\\(''version:'', pkg.version\\)\")",
+      "Bash(npx skills:*)"
     ]
   }
 }

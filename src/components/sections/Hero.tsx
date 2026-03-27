@@ -65,7 +65,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7 }}
-          className="text-base md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-base md:text-xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Café de spécialité colombien, nourriture 100&nbsp;% maison et halal.
           Chaque commande est unique — composée comme tu veux, servie avec soin.
@@ -105,7 +105,7 @@ export default function Hero() {
           ].map((s) => (
             <div key={s.label} className="text-center">
               <p className="font-heading font-bold text-2xl text-white">{s.value}</p>
-              <p className="text-xs text-white/50 mt-0.5">{s.label}</p>
+              <p className="text-xs text-white/70 mt-0.5">{s.label}</p>
             </div>
           ))}
         </motion.div>

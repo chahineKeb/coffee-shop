@@ -42,7 +42,7 @@ export default function CookieBanner() {
                 href="/politique-de-confidentialite"
                 className="text-caramel underline underline-offset-2 hover:text-lego-off-white transition-colors"
               >
-                En savoir plus
+                Politique de confidentialité
               </Link>
             </p>
             <div className="flex gap-2">

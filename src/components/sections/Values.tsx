@@ -42,11 +42,11 @@ export default function Values() {
               Ton café,{" "}
               <span className="text-lego-red">assemblé comme des LEGO</span>
             </h2>
-            <p className="text-lego-off-white/60 text-lg leading-relaxed mb-5">
+            <p className="text-lego-off-white/80 text-lg leading-relaxed mb-5">
               Tu choisis ta base, tes saveurs, tes ajouts. Chaque combo est une création
               unique — construite brique par brique, servie avec intention.
             </p>
-            <p className="text-lego-off-white/40 text-base">
+            <p className="text-lego-off-white/70 text-base">
               Zéro barrière, zéro jugement. Juste du fun, du goût, et toi à la barre.
             </p>
             <blockquote className="mt-8 pl-4 border-l-2 border-caramel">
@@ -111,7 +111,7 @@ export default function Values() {
               <h3 className="font-heading font-bold text-3xl md:text-4xl text-white mt-3 mb-5 text-balance">
                 Finca El Ladrillo,<br />Valle del Cauca
               </h3>
-              <p className="text-white/65 text-base md:text-lg leading-relaxed">
+              <p className="text-white/80 text-base md:text-lg leading-relaxed">
                 Haut dans la montagne colombienne, des fermiers indépendants cultivent
                 notre café avec soin. Pas d&apos;industrie — juste{" "}
                 <strong className="text-white/90">une famille, une parcelle</strong>,
@@ -147,7 +147,7 @@ export default function Values() {
               <h4 className="font-heading font-bold text-xl text-lego-off-white mb-3">
                 {c.title}
               </h4>
-              <p className="text-lego-off-white/50 text-sm leading-relaxed">{c.desc}</p>
+              <p className="text-lego-off-white/75 text-sm leading-relaxed">{c.desc}</p>
             </motion.div>
           ))}
         </div>

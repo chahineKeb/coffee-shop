@@ -81,7 +81,8 @@ export default function Menu() {
                   : "bg-white text-warm-dark border-warm-dark/10 hover:border-warm-dark/25"
                 }`}
             >
-              {cat === "boisson" ? "☕ Boissons" : "🍪 Food"}
+              <span aria-hidden="true">{cat === "boisson" ? "☕" : "🍪"}</span>
+              {cat === "boisson" ? " Boissons" : " Food"}
             </button>
           ))}
         </motion.div>
@@ -116,12 +117,12 @@ export default function Menu() {
                   {/* Badges temp */}
                   <div className="absolute top-3 left-3 flex gap-1.5">
                     {item.isHot && (
-                      <span className="px-2 py-0.5 bg-orange-100/95 text-orange-800 rounded-full text-xs font-semibold backdrop-blur-sm">
+                      <span className="px-2 py-0.5 bg-orange-100/95 text-orange-900 rounded-full text-xs font-semibold backdrop-blur-sm">
                         🔥 Chaud
                       </span>
                     )}
                     {item.isCold && (
-                      <span className="px-2 py-0.5 bg-sky-100/95 text-sky-800 rounded-full text-xs font-semibold backdrop-blur-sm">
+                      <span className="px-2 py-0.5 bg-sky-100/95 text-sky-900 rounded-full text-xs font-semibold backdrop-blur-sm">
                         ❄️ Froid
                       </span>
                     )}

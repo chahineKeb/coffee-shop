@@ -8,10 +8,20 @@ export default function Newsletter() {
   const [email, setEmail] = useState("")
   const [consent, setConsent] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState("")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (email.trim() && consent) setSubmitted(true)
+    setError("")
+    if (!email.trim()) {
+      setError("L'adresse email est requise.")
+      return
+    }
+    if (!consent) {
+      setError("Tu dois accepter la politique de confidentialité pour continuer.")
+      return
+    }
+    setSubmitted(true)
   }
 
   return (
@@ -55,15 +65,22 @@ export default function Newsletter() {
               </p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md mx-auto" noValidate>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md mx-auto" noValidate aria-describedby={error ? "newsletter-error" : undefined}>
+              {error && (
+                <p id="newsletter-error" role="alert" className="text-lego-red text-sm font-medium text-left">
+                  {error}
+                </p>
+              )}
               <div className="flex flex-col sm:flex-row gap-3">
+                <label htmlFor="newsletter-email" className="sr-only">Adresse email</label>
                 <input
+                  id="newsletter-email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="ton@email.com"
                   required
-                  aria-label="Adresse email"
+                  aria-required="true"
                   className="flex-1 px-5 py-3.5 bg-white border border-warm-dark/10 rounded-xl text-warm-dark placeholder:text-warm-muted/50 focus:outline-none focus:ring-2 focus:ring-lego-red/30 transition-all text-sm"
                 />
                 <button

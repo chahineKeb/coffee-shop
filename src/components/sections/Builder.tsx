@@ -204,6 +204,8 @@ function DropZone({
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             className="text-xs font-bold text-lego-red"
+            role="status"
+            aria-live="polite"
           >
             Lâche !
           </motion.span>
@@ -461,7 +463,7 @@ function RecapStep({
 
             {/* Footer ticket — résumé texte */}
             <div className="bg-lego-off-white/60 border-t border-black/5 px-6 py-4">
-              <p className="text-xs text-warm-muted/60 leading-relaxed">
+              <p className="text-xs text-warm-muted leading-relaxed">
                 {[...drinkOrder, ...foodOrder].map(b => b.label).join(" · ")}
               </p>
             </div>
@@ -602,7 +604,7 @@ export default function Builder() {
             ← Retour
           </button>
 
-          <p className="text-xs text-warm-muted/40 hidden sm:block">
+          <p className="text-xs text-warm-muted/70 hidden sm:block">
             {step === 1 && "Configure ta boisson, puis passe au food"}
             {step === 2 && "Ajoute du food (optionnel), puis vois ton récap"}
             {step === 3 && "Voilà ta commande complète 🎉"}
